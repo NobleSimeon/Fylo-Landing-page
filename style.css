@@ -1,0 +1,372 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-very-dark-blue: hsl(243, 87%, 12%);
+    --primary-desaturated-blue: hsl(238, 22%, 44%);
+    --accent-bright-blue: hsl(224, 93%, 58%);
+    --accent-moderate-cyan: hsl(170, 45%, 43%);
+    --neutral-light-grayish-blue: hsl(240, 75%, 98%);
+    --neutral-light-gray: hsl(0, 0%, 75%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Typograpghy */
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+ /* UTILITIES */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3, h4 {
+    font-family: "Raleway", Poppins;
+}
+p, a, li {
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+}
+ul {
+    list-style: none;
+}
+li {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+h2 {
+    text-align: center;
+    margin-block: 2rem;
+    font-size: 1.7rem;
+    color: var(--primary-very-dark-blue);
+}
+
+ /* HEADER */
+header {
+    padding: 2rem;
+
+}
+header .flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    width: 10rem;
+}
+header a {
+    margin-left: 1.2rem;
+}
+
+/* First section */
+
+section {
+    padding: 2rem;
+    margin-top: 6rem;
+}
+
+section img {
+    width: 100%;
+}
+
+[first-section] .textarea {
+    text-align: center;
+}
+[first-section] h1 {
+    font-size: 2.5rem;
+    margin-block: 3rem;
+}
+[first-section] p {
+    padding: 1rem;
+    line-height: 1.5;
+    margin-block-end: 2rem;
+}
+input + input {
+    margin-top: 1.2rem;
+}
+section input {
+    max-width: 30rem;
+    padding: 1.2rem 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #555;
+}
+section [type="submit"] {
+    max-width: 20rem;
+    border: none;
+    background-color: var(--accent-bright-blue);
+    color: #fff;
+    font-weight: bold;
+    font-family: "Open Sans";
+}
+
+/* second Section */
+
+[second-section] {
+    background-image: url("images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    padding: 0;
+    padding-top: 53px;
+    
+}
+main {
+    background-color: var(--neutral-light-grayish-blue);
+    padding: 2rem;
+    padding-bottom: 6rem;
+}
+.illustration-2 {
+    margin-block: 5rem;
+}
+
+
+.textarea>p {
+    color: var(--primary-desaturated-blue);
+    margin-bottom: 1.8rem;
+}
+
+.link {
+    width: 15rem;
+    margin: 3rem auto;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--accent-moderate-cyan);
+    
+}
+
+.link.flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.link img {
+    width: 20px;
+}
+.link a {
+    font-size: 1.4rem;
+    color: var(--accent-moderate-cyan);
+}
+.testimonial {
+    width: 90%;
+    max-width: 32rem;
+    background-color: white;
+    box-shadow: 0 0 5px 3px var(--neutral-light-gray);
+    padding: 2rem;
+    margin: 3rem auto;
+    border-radius: 10px;
+}
+.testimonial img {
+    width: 1.9rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+.testimonial p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.avatar.flex {
+    flex-direction: row;
+    align-items: center;
+}
+.avatar img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+.avatar .avatar-name p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.avatar .avatar-name p>small {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* third-section */
+
+[third-section] {
+    background-color: var(--primary-desaturated-blue);
+    padding: 5rem;
+    margin: 0;
+    text-align: center;
+    color: white;
+    padding-bottom: 6rem;
+}
+
+[third-section] h2 {
+    color: white;
+}
+[third-section] p {
+    color: white;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--primary-very-dark-blue);
+    padding: 5rem;
+}
+footer svg {
+    fill: white;
+    margin-bottom: 4rem;
+}
+.phone, .mail {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+footer p {
+    color: white;
+    margin-left: 2rem;
+}
+.about-us {
+    margin-block: 2rem;
+}
+.contact-us {
+    margin-block-start: 3rem;
+}
+
+
+@media screen and (max-width: 245px) {
+    header .flex {
+        flex-direction: column;
+    }
+    ul.flex {
+        flex-direction: row;
+    }
+    [third-section] {
+        padding: 3rem;
+    }
+}
+@media screen and (min-width: 375px) {
+    [second-section] {
+        background-image: url("images/bg-curve-desktop.svg");
+        background-repeat: no-repeat;
+        padding: 0;
+        padding-top: 114px;
+        
+    }
+}
+@media screen and (min-width: 900px) {
+    header a {
+        margin-left: 3rem;
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .flex {
+        flex-direction: row;
+    }
+    [first-section] .image-container {
+        flex-basis: 50%;
+        order: 2;
+    }
+    [first-section] .textarea {
+        flex-basis: 50%;
+        order: 1;
+        text-align: left;
+    }
+    [first-section] h1 {
+        margin-block-end: 0;
+    }
+    [first-section] p {
+        padding-left: 0;
+    }
+    form.flex {
+        align-items: center;
+    }
+    section input {
+        width: 30rem;
+        height: 4rem;
+    }
+    section [type="submit"] {
+        width: 15rem;
+        margin-top: 0;
+    }
+    input + input {
+        margin-left: 1.2rem;
+    }
+    [second-section] .image-container {
+        flex-basis: 40%;
+        order: 2;
+    }
+    [second-section] .textarea {
+        flex-basis: 55%;
+        order: 1;
+        text-align: left;
+    }
+    h2 {
+        text-align: left;
+    }
+    .link {
+        margin: 3rem 0;
+        
+    }
+    .testimonial {
+        margin: 3rem 0;
+    }
+    .avatar.flex {
+        justify-content: flex-start;
+    }
+    [third-section] .textarea {
+        flex-basis: 40%;
+        text-align: left;
+    }
+    [third-section] .flex {
+        align-items: center;
+        justify-content: space-between;
+    }
+    [third-section] form {
+        flex-direction: column;
+        flex-basis: 40%;
+        margin-left: 0;
+    }
+    [third-section] form [type="email"] {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    [third-section] form [type="submit"] {
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+    footer {
+        flex-wrap: wrap;
+    }
+    footer .container.grid {
+        display: grid;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        align-items: center;
+        grid-column-gap: 2rem;
+    }
+    footer svg {
+        grid-column: span 4;
+    }
+    footer .contact.flex {
+        flex-direction: column;
+    }
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
